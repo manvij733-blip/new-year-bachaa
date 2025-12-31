@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(120deg, #e6f4ff, #ffe6f2);
+  overflow: hidden;
+}
+
+section {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  z-index: 2;
+}
+
+section.active {
+  display: flex;
+}
+
+button {
+  margin-top: 30px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: pink;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+h1.big {
+  font-size: 48px;
+}
+
+.pop {
+  animation: pop 1s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.card-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  width: 160px;
+  height: 200px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card div {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.front {
+  background: pink;
+}
+
+.back {
+  background: white;
+  transform: rotateY(180deg);
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card {
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+#letter {
+  max-width: 600px;
+}
+
+#letterText {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+#final h1 {
+  max-width: 90%;
+  font-size: clamp(22px, 4vw, 36px);
+  line-height: 1.4;
+}
+
+#fireworks {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  display: none;
+}
