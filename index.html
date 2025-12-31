@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy New Year Love</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="fireworks"></canvas>
+
+<section id="overlay" class="active">
+  <h1 class="pop">Hey love ✨💗</h1>
+  <button onclick="go('newyear')">Tap 💫</button>
+</section>
+
+<section id="newyear">
+  <h1 class="big">HAPPY NEW YEAR 2026 🎆</h1>
+  <button onclick="go('cards')">Next 💖</button>
+</section>
+
+<section id="cards">
+  <div class="card-grid">
+    <div class="card" onclick="flip(this)">
+      <div class="front"></div>
+      <div class="back">You are the best boyfriend in the world 💕</div>
+    </div>
+    <div class="card" onclick="flip(this)">
+      <div class="front"></div>
+      <div class="back">You are the best boyfriend in the world 💕</div>
+    </div>
+    <div class="card" onclick="flip(this)">
+      <div class="front"></div>
+      <div class="back">You are the best boyfriend in the world 💕</div>
+    </div>
+  </div>
+  <button onclick="go('letter')">A letter for the special 💌</button>
+</section>
+
+<section id="letter">
+  <p id="letterText"></p>
+  <button onclick="go('final')">One last thing 💖</button>
+</section>
+
+<section id="final">
+  <h1>
+    FALLING IN LOVE WITH YOU IS THE MOST BEAUTIFUL EXPERIENCE IN MY LIFE 💖<br><br>
+    I LOVE TO BE YOURS — NOW AND FOREVER.<br><br>
+    BECAUSE THIS BAUNI BADMOSH LOVES YOU THE MOSTTTTTTTT 😤❤️
+  </h1>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
